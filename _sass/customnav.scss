@@ -1,0 +1,24 @@
+.nav {
+    border-top: 1px solid #92b2d3;
+    list-style: none;
+    margin: 20px 0 0 0;
+    padding: 0;
+    text-align: left;
+}
+
+.nav li {
+    display: inline;
+}
+
+.nav a {
+    display: inline-block;
+    color: #f2f2f2;
+    padding: 10px;
+    font-size: 17px;
+    padding: 14px 16px;
+}
+
+.nav a.active {
+    background-color: #0158b4;
+    color: white;
+}

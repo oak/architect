@@ -1,5 +1,7 @@
 ---
+menu_title: Home
 layout: default
+order: 1
 ---
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.

@@ -1,5 +1,6 @@
-title: Architect theme
-description: Architect is a theme for GitHub Pages.
+title: oak's Architect theme
+description: oak's Architect is a theme for GitHub Pages.
 show_downloads: true
 google_analytics:
-theme: jekyll-theme-architect
+theme: jekyll-theme-oak-architect
+project_github_url: your-url-here
