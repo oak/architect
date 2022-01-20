@@ -45,8 +45,10 @@
     var iframe = document.getElementById("content-iframe");
     
     // Adjusting the iframe height onload event
-    iframe.onload = function(){
-        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+    iframe.onload = function() {
+        setTimeout(function() {          
+          iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+        }, 500)
     }
     </script>
 </html>
