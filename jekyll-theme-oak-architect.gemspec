@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |s|
-  s.name          = "jekyll-theme-architect"
+  s.name          = "jekyll-theme-oak-architect"
   s.version       = "0.2.0"
   s.license       = "CC0-1.0"
-  s.authors       = ["Jason Long", "GitHub, Inc."]
-  s.email         = ["opensource+jekyll-theme-architect@github.com"]
-  s.homepage      = "https://github.com/pages-themes/architect"
+  s.authors       = ["Alexandre Carvalho", "Jason Long", "GitHub, Inc."]
+  s.email         = ["adcarvalho@github.com"]
+  s.homepage      = "https://github.com/oak3dev/architect"
   s.summary       = "Architect is a Jekyll theme for GitHub Pages"
 
   s.files         = `git ls-files -z`.split("\x0").select do |f|

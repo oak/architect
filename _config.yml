@@ -3,4 +3,4 @@ description: oak's Architect is a theme for GitHub Pages.
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-oak-architect
-project_github_url: your-url-here
+basepath: ''

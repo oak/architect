@@ -1,11 +1,10 @@
-  <ul class="nav">
-    {% assign menu_items = site.pages | where_exp: 'item', 'item.order' | sort: 'order' %}
-    {% for menu_item in menu_items %}
-    {% if page.url == menu_item.url %}
-    <a href="{{menu_item.url}}" class="active">{{menu_item.menu_title}}</a>
-    {% else %}
-    <a href="{{menu_item.url}}">{{menu_item.menu_title}}</a>
-    {% endif %}
-    {% endfor %}
-    <a href="{{site.project_github_url}}">View Project</a>
-  </ul>
+<ul class="nav">
+  {% assign menu_items = site.pages | where_exp: 'item', 'item.order' | sort: 'order' %}
+  {% for menu_item in menu_items %}
+  {% if page.url == menu_item.url %}
+  <a href="{{site.basepath}}{{menu_item.url}}" class="active">{{menu_item.menu_title}}</a>
+  {% else %}
+  <a href="{{site.basepath}}{{menu_item.url}}">{{menu_item.menu_title}}</a>
+  {% endif %}
+  {% endfor %}
+</ul>
