@@ -2,9 +2,9 @@
   {% assign menu_items = site.pages | where_exp: 'item', 'item.order' | sort: 'order' %}
   {% for menu_item in menu_items %}
   {% if page.url == menu_item.url %}
-  <a href="{{site.basepath}}{{menu_item.url}}" class="active">{{menu_item.menu_title}}</a>
+  <a href="{{site.baseurl}}{{menu_item.url}}" class="active">{{menu_item.menu_title}}</a>
   {% else %}
-  <a href="{{site.basepath}}{{menu_item.url}}">{{menu_item.menu_title}}</a>
+  <a href="{{site.baseurl}}{{menu_item.url}}">{{menu_item.menu_title}}</a>
   {% endif %}
   {% endfor %}
 </ul>
