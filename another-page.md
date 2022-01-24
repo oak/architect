@@ -1,4 +1,5 @@
 ---
+menu_item: true
 menu_title: Other
 layout: default
 order: 2

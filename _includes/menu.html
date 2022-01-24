@@ -1,10 +1,34 @@
-<ul class="nav">
-  {% assign menu_items = site.pages | where_exp: 'item', 'item.order' | sort: 'order' %}
+<div class="navbar">
+  {% assign menu_items = site.pages | where: 'menu_item', true | sort: 'order' %}
   {% for menu_item in menu_items %}
+
+  {% if menu_item.child_category %}
+  {% if page.category == menu_item.child_category %}
+  <div class="dropdown active">
+  {% else %}
+  <div class="dropdown">
+  {% endif %}
+
+    <button class="dropbtn">{{menu_item.menu_title}}</button>
+    <div class="dropdown-content">
+      {% assign children = site.pages | where: 'category', menu_item.child_category | sort: 'order' %}
+      {% for child in children %}      
+      {% if page.url == child.url %}
+      <a href="{{site.baseurl}}{{child.url}}" class="active">{{child.menu_title}}</a>  
+      {% else %}
+      <a href="{{site.baseurl}}{{child.url}}">{{child.menu_title}}</a>  
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  {% else %}
+
   {% if page.url == menu_item.url %}
   <a href="{{site.baseurl}}{{menu_item.url}}" class="active">{{menu_item.menu_title}}</a>
   {% else %}
   <a href="{{site.baseurl}}{{menu_item.url}}">{{menu_item.menu_title}}</a>
   {% endif %}
+
+  {% endif %}
   {% endfor %}
-</ul>
+</div>
