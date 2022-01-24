@@ -8,7 +8,6 @@ a:hover {
 header {
     padding-top: 40px;
     background: #e53e3e;
-    font-family: Arial, Helvetica, sans-serif;
     border-bottom: solid 1px #e53e3e;
 }
 
@@ -17,9 +16,28 @@ header h1 {
 }
 
 header h2 {
-  color: #fdc8c8;
+    color: #fdc8c8;
 }
 
 pre code {
     color: #d0284c;
+}
+
+#main-content h1:before {
+    color: #e78787;
+}
+#main-content h2:before {
+    color: #e78787;
+}
+#main-content h3:before {
+    color: #e78787;
+}
+#main-content h4:before {
+    color: #e78787;
+}
+#main-content h5:before {
+    color: #e78787;
+}
+#main-content h6:before {
+    color: #e78787;
 }
