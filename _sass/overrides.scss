@@ -23,21 +23,11 @@ pre code {
     color: #d0284c;
 }
 
-#main-content h1:before {
-    color: #e78787;
-}
-#main-content h2:before {
-    color: #e78787;
-}
-#main-content h3:before {
-    color: #e78787;
-}
-#main-content h4:before {
-    color: #e78787;
-}
-#main-content h5:before {
-    color: #e78787;
-}
+#main-content h1:before,
+#main-content h2:before,
+#main-content h3:before,
+#main-content h4:before,
+#main-content h5:before,
 #main-content h6:before {
     color: #e78787;
 }
