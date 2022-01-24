@@ -3,13 +3,13 @@
   {% for menu_item in menu_items %}
 
   {% if menu_item.child_category %}
-  {% if page.category == menu_item.child_category %}
-  <div class="dropdown active">
-  {% else %}
   <div class="dropdown">
-  {% endif %}
-
-    <button class="dropbtn">{{menu_item.menu_title}}</button>
+    {% if page.category == menu_item.child_category or page.url == menu_item.url %}
+    <a href="{{site.baseurl}}{{menu_item.url}}" class="dropbtn active">{{menu_item.menu_title}}</a>
+    {% else %}
+    <a href="{{site.baseurl}}{{menu_item.url}}" class="dropbtn">{{menu_item.menu_title}}</a>
+    {% endif %}
+    <div style="clear: both;"></div>
     <div class="dropdown-content">
       {% assign children = site.pages | where: 'category', menu_item.child_category | sort: 'order' %}
       {% for child in children %}      
